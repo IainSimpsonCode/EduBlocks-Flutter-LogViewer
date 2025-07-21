@@ -1,0 +1,14 @@
+:root {
+    --primary-colour: #22223B;
+    --primary900: #0F0F1A;
+    --primary700: #22223B;
+    --primary500: #3C3C68;
+    --primary300: #52528E;
+    --primary100: #7171AD;
+    --secondary-colour: #96ADC8;
+    --call-to-action-colour: #FFBF00;
+    --background-colour: #F4E8C1;
+
+    --on-primary-colour: #FFFFFF;
+    --on-secondary-colour: --primary900;
+}

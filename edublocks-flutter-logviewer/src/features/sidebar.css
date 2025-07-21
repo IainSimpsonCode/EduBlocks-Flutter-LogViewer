@@ -1,0 +1,10 @@
+@import url('../global-styling/colours.css');
+
+#sidebar {
+  width: 250px;
+  height: 100vh; /* full viewport height */
+  background-color: var(--primary-colour);
+  /* optional: fix sidebar scrolling if content is long */
+  overflow-y: auto;
+  position: relative; /* normal flow */
+}
