@@ -45,7 +45,7 @@ function Content({ PID, AID }) {
                 
                 <Typography sx={{ mb: 1 }}>
                     <span style={{ color: 'green' }}>{format(new Date(doc.time), 'HH:mm:ss')}</span>{' '}
-                    {doc.activity}: <strong>{String(doc.value)}</strong>
+                    <span style={{ color: 'red' }}>{doc.activity}</span>: <strong>{String(doc.value)}</strong>
                 </Typography>
             ))
         ) : (
