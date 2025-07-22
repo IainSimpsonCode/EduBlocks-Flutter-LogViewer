@@ -41,6 +41,18 @@ function Content({ PID, AID }) {
         )}
 
         {Array.isArray(participantInfo) && participantInfo.length > 0 ? (
+            <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>Interactions: {participantInfo.length}</Typography>
+        ) : (
+            <Typography>Loading...</Typography>
+        )}
+
+        {Array.isArray(participantInfo) && participantInfo.length > 0 ? (
+            <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>Time on task: {participantInfo[participantInfo.length - 1].time - participantInfo[0].time}</Typography>
+        ) : (
+            <Typography>Loading...</Typography>
+        )}
+
+        {Array.isArray(participantInfo) && participantInfo.length > 0 ? (
             participantInfo.map((doc, index) => (
                 
                 <Typography sx={{ mb: 1 }}>
