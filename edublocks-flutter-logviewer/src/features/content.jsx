@@ -46,9 +46,20 @@ function Content({ PID, AID }) {
             <Typography>Loading...</Typography>
         )}
 
-        {Array.isArray(participantInfo) && participantInfo.length > 0 ? (
-            <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>Time on task: {participantInfo[participantInfo.length - 1].time - participantInfo[0].time}</Typography>
-        ) : (
+        {Array.isArray(participantInfo) && participantInfo.length > 1 ? (() => {
+            const startTime = new Date(participantInfo[1].time);
+            const endTime = new Date(participantInfo[participantInfo.length - 1].time);
+            const diffMs = endTime - startTime;
+
+            const minutes = Math.floor(diffMs / 60000);
+            const seconds = Math.floor((diffMs % 60000) / 1000);
+
+            return (
+                <Typography variant="h6" sx={{ fontWeight: 'bold', mb: 2 }}>
+                    Time on task: {minutes}m {seconds}s
+                </Typography>
+            );
+        })() : (
             <Typography>Loading...</Typography>
         )}
 
